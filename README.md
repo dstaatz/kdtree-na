@@ -11,7 +11,7 @@
 Add `kdtree` to `Cargo.toml`
 ```toml
 [dependencies]
-kdtree = "0.6"
+kdtree = { git = "https://github.com/dstaatz/kdtree-na.git" }
 ```
 
 Add points to kdtree and query nearest n points with distance function
