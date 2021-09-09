@@ -1,13 +1,13 @@
 #![feature(test)]
-extern crate nalgebra;
 extern crate kdtree;
+extern crate nalgebra;
 extern crate rand;
 extern crate test;
 
 use kdtree::norm::EuclideanNormSquared;
 use kdtree::KdTree;
+use nalgebra::{DVector, Vector3};
 use test::Bencher;
-use nalgebra::{Vector3, DVector};
 
 fn rand_data_static() -> (Vector3<f64>, f64) {
     (Vector3::new_random(), rand::random())
