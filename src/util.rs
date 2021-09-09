@@ -1,6 +1,5 @@
 use nalgebra::{
-    allocator::Allocator, storage::Storage, DefaultAllocator, Dim, Matrix, Norm, OVector,
-    RealField, Vector,
+    allocator::Allocator, storage::Storage, DefaultAllocator, Dim, Norm, OVector, RealField, Vector,
 };
 
 pub fn distance_to_space<X, D, S1, S2, S3>(
@@ -18,7 +17,7 @@ where
     DefaultAllocator: Allocator<X, D>,
 {
     let (rows, cols) = p1.shape_generic();
-    let p2 = OVector::from_fn_generic(rows, cols, |i, j| {
+    let p2 = OVector::from_fn_generic(rows, cols, |i, _| {
         if p1[i] > max_bounds[i] {
             max_bounds[i].clone()
         } else if p1[i] < min_bounds[i] {
