@@ -5,10 +5,23 @@ use nalgebra::{
     OVector, RealField, Vector,
 };
 
+#[cfg(feature = "serialize")]
+use nalgebra::Scalar;
+
+#[cfg(feature = "serialize")]
+use serde::{de::DeserializeOwned, Deserialize, Serialize};
+
 use crate::heap_element::HeapElement;
 use crate::util;
 
 #[cfg_attr(feature = "serialize", derive(Serialize, Deserialize))]
+#[cfg_attr(
+    feature = "serialize",
+    serde(bound(
+        serialize = "X: Scalar + Serialize, T: Serialize, D: Serialize, <DefaultAllocator as Allocator<X, D>>::Buffer: Serialize",
+        deserialize = "X: Scalar + DeserializeOwned, T: DeserializeOwned, D: DeserializeOwned, <DefaultAllocator as Allocator<X, D>>::Buffer: DeserializeOwned"
+    ))
+)]
 #[derive(Clone, Debug)]
 pub struct KdTree<X, T, D: Dim>
 where

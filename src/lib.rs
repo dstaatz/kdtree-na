@@ -8,7 +8,7 @@
 //! extern crate nalgebra;
 //!
 //! use nalgebra::{vector, Vector2};
-//! use kdtree::{norm::EuclideanNormSquared, KdTree};
+//! use kdtree_na::{norm::EuclideanNormSquared, KdTree};
 //!
 //! let a: (Vector2<f64>, usize) = (vector![0f64, 0f64], 0);
 //! let b: (Vector2<f64>, usize) = (vector![1f64, 1f64], 1);
@@ -57,8 +57,7 @@ extern crate nalgebra;
 extern crate num_traits;
 
 #[cfg(feature = "serialize")]
-#[cfg_attr(feature = "serialize", macro_use)]
-extern crate serde_derive;
+extern crate serde;
 
 mod heap_element;
 pub mod kdtree;

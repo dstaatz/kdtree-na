@@ -1,9 +1,9 @@
-extern crate kdtree;
+extern crate kdtree_na;
 extern crate nalgebra;
 
 use nalgebra::{dvector, vector, DVector, Vector2};
 
-use kdtree::{norm::EuclideanNormSquared, ErrorKind, KdTree};
+use kdtree_na::{norm::EuclideanNormSquared, ErrorKind, KdTree};
 
 static POINT_A: (Vector2<f64>, usize) = (vector![0f64, 0f64], 0);
 static POINT_B: (Vector2<f64>, usize) = (vector![1f64, 1f64], 1);

@@ -1,11 +1,11 @@
 #![feature(test)]
-extern crate kdtree;
+extern crate kdtree_na;
 extern crate nalgebra;
 extern crate rand;
 extern crate test;
 
-use kdtree::norm::EuclideanNormSquared;
-use kdtree::KdTree;
+use kdtree_na::norm::EuclideanNormSquared;
+use kdtree_na::KdTree;
 use nalgebra::{DVector, Vector3};
 use test::Bencher;
 

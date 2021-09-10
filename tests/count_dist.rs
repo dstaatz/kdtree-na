@@ -1,4 +1,4 @@
-extern crate kdtree;
+extern crate kdtree_na;
 extern crate nalgebra;
 extern crate num_traits;
 
@@ -8,7 +8,7 @@ use nalgebra::constraint::{SameNumberOfColumns, SameNumberOfRows, ShapeConstrain
 use nalgebra::{storage::Storage, vector, DVector, Dim, Matrix, Norm, SimdComplexField, Vector2};
 use num_traits::Zero;
 
-use kdtree::KdTree;
+use kdtree_na::KdTree;
 
 pub struct EuclideanNormSquaredCounted<'a> {
     norm_count: &'a AtomicUsize,

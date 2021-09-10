@@ -19,7 +19,7 @@ Add points to kdtree and query nearest n points with distance function
 extern crate nalgebra;
 
 use nalgebra::{vector, Vector2};
-use kdtree::{norm::EuclideanNormSquared, KdTree};
+use kdtree_na::{norm::EuclideanNormSquared, KdTree};
 
 let a: (Vector2<f64>, usize) = (vector![0f64, 0f64], 0);
 let b: (Vector2<f64>, usize) = (vector![1f64, 1f64], 1);
