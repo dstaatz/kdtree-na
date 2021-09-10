@@ -20,3 +20,7 @@ jobs:
       run: cargo build --verbose
     - name: Run tests
       run: cargo test --verbose
+    - name: Build with serialize
+      run: cargo build --features serialize --verbose
+    - name: Run tests with serialize
+      run: cargo test --features serialize --verbose
